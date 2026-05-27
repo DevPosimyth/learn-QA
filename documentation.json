@@ -27,96 +27,96 @@
             "group": "Account",
             "icon": "user",
             "pages": [
-              { "title": "Account Overview", "path": "account/index" },
-              { "title": "How to Manage Licence", "path": "account/manage-licence" },
-              { "title": "How to Use Credits", "path": "account/use-credits" },
-              { "title": "How to Upgrade the Current Plan", "path": "account/upgrade-plan" },
-              { "title": "How to Update Your Payment Method", "path": "account/update-payment-method" },
-              { "title": "Difference Between WDesignKit Account and POSIMYTH Store Account", "path": "account/difference-between-accounts" },
-              { "title": "How to Reset Password", "path": "account/reset-password" },
-              { "title": "How to Create a Login Key", "path": "account/create-login-key" },
-              { "title": "How to White Label WDesignKit", "path": "account/white-label" },
-              { "title": "How to Manage Workspace Roles", "path": "account/manage-workspace-roles" },
-              { "title": "How to Delete a Workspace", "path": "account/delete-workspace" }
+              { "title": "Account Overview", "path": "account/index", "icon": "house" },
+              { "title": "How to Manage Licence", "path": "account/manage-licence", "icon": "key" },
+              { "title": "How to Use Credits", "path": "account/use-credits", "icon": "coins" },
+              { "title": "How to Upgrade the Current Plan", "path": "account/upgrade-plan", "icon": "arrow-up-circle" },
+              { "title": "How to Update Your Payment Method", "path": "account/update-payment-method", "icon": "credit-card" },
+              { "title": "Difference Between WDesignKit and POSIMYTH Store Account", "path": "account/difference-between-accounts", "icon": "git-compare" },
+              { "title": "How to Reset Password", "path": "account/reset-password", "icon": "lock-keyhole" },
+              { "title": "How to Create a Login Key", "path": "account/create-login-key", "icon": "key-round" },
+              { "title": "How to White Label WDesignKit", "path": "account/white-label", "icon": "badge" },
+              { "title": "How to Manage Workspace Roles", "path": "account/manage-workspace-roles", "icon": "users" },
+              { "title": "How to Delete a Workspace", "path": "account/delete-workspace", "icon": "trash-2" }
             ]
           },
           {
             "group": "Getting Started",
             "icon": "rocket",
             "pages": [
-              { "title": "Getting Started Overview", "path": "getting-started/index" },
-              { "title": "How to Install WDesignKit Plugin", "path": "getting-started/install-wdesignkit-plugin" },
-              { "title": "How to Get License Key for Activation", "path": "getting-started/get-license-key-for-activation" },
-              { "title": "How to Import Templates From Public Library", "path": "getting-started/import-templates-from-public-library" },
-              { "title": "How to Import AI Kits", "path": "getting-started/import-ai-kits" },
-              { "title": "How to Access and Use the Workspace", "path": "getting-started/access-and-use-workspace" },
-              { "title": "How to Add Templates, Widgets, and Snippets in a Workspace", "path": "getting-started/add-templates-widgets-in-workspace" },
-              { "title": "How to Manage Workspace Roles", "path": "getting-started/manage-workspace-roles" },
-              { "title": "How to Enable or Disable Template and Widget Features", "path": "getting-started/enable-disable-template-widget-features" },
-              { "title": "How to Create a Pagekit", "path": "getting-started/create-pagekit" },
-              { "title": "How to Modify Downloaded Widgets", "path": "getting-started/modify-downloaded-widget" },
-              { "title": "How Does Copy Paste Work in Bricks", "path": "getting-started/copy-paste-feature-in-bricks" }
+              { "title": "Getting Started Overview", "path": "getting-started/index", "icon": "house" },
+              { "title": "How to Install WDesignKit Plugin", "path": "getting-started/install-wdesignkit-plugin", "icon": "download" },
+              { "title": "How to Get License Key for Activation", "path": "getting-started/get-license-key-for-activation", "icon": "key" },
+              { "title": "How to Import Templates From Public Library", "path": "getting-started/import-templates-from-public-library", "icon": "library" },
+              { "title": "How to Import AI Kits", "path": "getting-started/import-ai-kits", "icon": "sparkles" },
+              { "title": "How to Access and Use the Workspace", "path": "getting-started/access-and-use-workspace", "icon": "folders" },
+              { "title": "How to Add Templates, Widgets & Snippets in Workspace", "path": "getting-started/add-templates-widgets-in-workspace", "icon": "plus-circle" },
+              { "title": "How to Manage Workspace Roles", "path": "getting-started/manage-workspace-roles", "icon": "users" },
+              { "title": "How to Enable or Disable Features", "path": "getting-started/enable-disable-template-widget-features", "icon": "toggle-right" },
+              { "title": "How to Create a Pagekit", "path": "getting-started/create-pagekit", "icon": "layout-panel-top" },
+              { "title": "How to Modify Downloaded Widgets", "path": "getting-started/modify-downloaded-widget", "icon": "pencil" },
+              { "title": "Copy Paste Feature in Bricks", "path": "getting-started/copy-paste-feature-in-bricks", "icon": "clipboard-copy" }
             ]
           },
           {
             "group": "Design Templates",
             "icon": "layout-template",
             "pages": [
-              { "title": "Design Templates Overview", "path": "design-templates/index" },
-              { "title": "How to Create Templates for Private Use", "path": "design-templates/create-templates-for-private-use" },
-              { "title": "How to Export Templates to Cloud", "path": "design-templates/export-templates-to-cloud" },
-              { "title": "How to Edit Template Information", "path": "design-templates/edit-template-information" },
-              { "title": "How to See Downloaded Templates", "path": "design-templates/see-downloaded-templates" },
-              { "title": "How to Favourite a Template", "path": "design-templates/favourite-template" },
-              { "title": "How to Delete a Template", "path": "design-templates/delete-template" }
+              { "title": "Design Templates Overview", "path": "design-templates/index", "icon": "house" },
+              { "title": "Create Templates for Private Use", "path": "design-templates/create-templates-for-private-use", "icon": "lock" },
+              { "title": "Export Templates to Cloud", "path": "design-templates/export-templates-to-cloud", "icon": "cloud-upload" },
+              { "title": "Edit Template Information", "path": "design-templates/edit-template-information", "icon": "file-pen" },
+              { "title": "See Downloaded Templates", "path": "design-templates/see-downloaded-templates", "icon": "hard-drive-download" },
+              { "title": "Favourite a Template", "path": "design-templates/favourite-template", "icon": "heart" },
+              { "title": "Delete a Template", "path": "design-templates/delete-template", "icon": "trash-2" }
             ]
           },
           {
             "group": "Ready Widgets",
-            "icon": "puzzle",
+            "icon": "blocks",
             "pages": [
-              { "title": "Ready Widgets Overview", "path": "ready-widgets/index" }
+              { "title": "Ready Widgets Overview", "path": "ready-widgets/index", "icon": "house" }
             ]
           },
           {
             "group": "Widget Builder",
-            "icon": "code",
+            "icon": "code-2",
             "pages": [
-              { "title": "Widget Builder Overview", "path": "widget-builder/index" },
-              { "title": "How to Create a Custom Elementor Widget", "path": "widget-builder/create-custom-elementor-widget" },
-              { "title": "How to Use Control Classes", "path": "widget-builder/use-control-classes" },
-              { "title": "How to Manage Versions of a Widget", "path": "widget-builder/manage-versions-of-a-widget" },
-              { "title": "How to Import or Export a Widget", "path": "widget-builder/import-export-widget" },
-              { "title": "How to Edit Widget Information", "path": "widget-builder/edit-widget-information" },
-              { "title": "How to Delete a Widget", "path": "widget-builder/delete-widget" },
-              { "title": "How to Download a Widget From Public Library", "path": "widget-builder/download-widget-from-public-library" }
+              { "title": "Widget Builder Overview", "path": "widget-builder/index", "icon": "house" },
+              { "title": "Create a Custom Elementor Widget", "path": "widget-builder/create-custom-elementor-widget", "icon": "plus-square" },
+              { "title": "Use Control Classes", "path": "widget-builder/use-control-classes", "icon": "sliders-horizontal" },
+              { "title": "Manage Versions of a Widget", "path": "widget-builder/manage-versions-of-a-widget", "icon": "git-branch" },
+              { "title": "Import or Export a Widget", "path": "widget-builder/import-export-widget", "icon": "arrow-left-right" },
+              { "title": "Edit Widget Information", "path": "widget-builder/edit-widget-information", "icon": "pencil" },
+              { "title": "Delete a Widget", "path": "widget-builder/delete-widget", "icon": "trash-2" },
+              { "title": "Download Widget From Public Library", "path": "widget-builder/download-widget-from-public-library", "icon": "download" }
             ]
           },
           {
             "group": "Figma Templates & UiChemy",
-            "icon": "figma",
+            "icon": "pen-tool",
             "pages": [
-              { "title": "Figma Templates Overview", "path": "figma-templates/index" },
-              { "title": "What is UiChemy?", "path": "figma-templates/what-is-uichemy" },
-              { "title": "How to Download Figma Templates", "path": "figma-templates/download-figma-templates" },
-              { "title": "UiChemy Compatible Pro Templates", "path": "figma-templates/uichemy-compatible-pro-templates" }
+              { "title": "Figma Templates Overview", "path": "figma-templates/index", "icon": "house" },
+              { "title": "What is UiChemy?", "path": "figma-templates/what-is-uichemy", "icon": "wand-sparkles" },
+              { "title": "Download Figma Templates", "path": "figma-templates/download-figma-templates", "icon": "download" },
+              { "title": "UiChemy Compatible Pro Templates", "path": "figma-templates/uichemy-compatible-pro-templates", "icon": "star" }
             ]
           },
           {
             "group": "Code Snippets",
             "icon": "terminal",
             "pages": [
-              { "title": "Code Snippets Overview", "path": "code-snippets/index" },
-              { "title": "How Snippets Work", "path": "code-snippets/how-snippets-work" }
+              { "title": "Code Snippets Overview", "path": "code-snippets/index", "icon": "house" },
+              { "title": "How Snippets Work", "path": "code-snippets/how-snippets-work", "icon": "braces" }
             ]
           },
           {
             "group": "Troubleshooting",
-            "icon": "triangle-alert",
+            "icon": "alert-triangle",
             "pages": [
-              { "title": "Troubleshooting Overview", "path": "troubleshooting/index" },
-              { "title": "Template Not Imported Correctly", "path": "troubleshooting/template-not-imported-correctly" },
-              { "title": "Fixing Unauthorized Access on Kit Import", "path": "troubleshooting/fixing-unauthorized-access-on-kit-import" }
+              { "title": "Troubleshooting Overview", "path": "troubleshooting/index", "icon": "house" },
+              { "title": "Template Not Imported Correctly", "path": "troubleshooting/template-not-imported-correctly", "icon": "file-x" },
+              { "title": "Fixing Unauthorized Access on Kit Import", "path": "troubleshooting/fixing-unauthorized-access-on-kit-import", "icon": "shield-alert" }
             ]
           }
         ]
