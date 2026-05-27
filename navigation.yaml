@@ -1,0 +1,80 @@
+navigation:
+  - group: Account
+    icon: user
+    pages:
+      - account/index
+      - account/manage-licence
+      - account/use-credits
+      - account/upgrade-plan
+      - account/update-payment-method
+      - account/difference-between-accounts
+      - account/reset-password
+      - account/create-login-key
+      - account/white-label
+      - account/manage-workspace-roles
+      - account/delete-workspace
+
+  - group: Getting Started
+    icon: rocket
+    pages:
+      - getting-started/index
+      - getting-started/install-wdesignkit-plugin
+      - getting-started/get-license-key-for-activation
+      - getting-started/import-templates-from-public-library
+      - getting-started/import-ai-kits
+      - getting-started/access-and-use-workspace
+      - getting-started/add-templates-widgets-in-workspace
+      - getting-started/manage-workspace-roles
+      - getting-started/enable-disable-template-widget-features
+      - getting-started/create-pagekit
+      - getting-started/modify-downloaded-widget
+      - getting-started/copy-paste-feature-in-bricks
+
+  - group: Design Templates
+    icon: layout-template
+    pages:
+      - design-templates/index
+      - design-templates/create-templates-for-private-use
+      - design-templates/export-templates-to-cloud
+      - design-templates/edit-template-information
+      - design-templates/see-downloaded-templates
+      - design-templates/favourite-template
+      - design-templates/delete-template
+
+  - group: Ready Widgets
+    icon: puzzle
+    pages:
+      - ready-widgets/index
+
+  - group: Widget Builder
+    icon: code
+    pages:
+      - widget-builder/index
+      - widget-builder/create-custom-elementor-widget
+      - widget-builder/use-control-classes
+      - widget-builder/manage-versions-of-a-widget
+      - widget-builder/import-export-widget
+      - widget-builder/edit-widget-information
+      - widget-builder/delete-widget
+      - widget-builder/download-widget-from-public-library
+
+  - group: Figma Templates & UiChemy
+    icon: figma
+    pages:
+      - figma-templates/index
+      - figma-templates/what-is-uichemy
+      - figma-templates/download-figma-templates
+      - figma-templates/uichemy-compatible-pro-templates
+
+  - group: Code Snippets
+    icon: terminal
+    pages:
+      - code-snippets/index
+      - code-snippets/how-snippets-work
+
+  - group: Troubleshooting
+    icon: triangle-alert
+    pages:
+      - troubleshooting/index
+      - troubleshooting/template-not-imported-correctly
+      - troubleshooting/fixing-unauthorized-access-on-kit-import
