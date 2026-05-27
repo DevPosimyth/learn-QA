@@ -6,13 +6,13 @@
   "colors": {
     "light": {
       "brand": "#C22076",
-      "heading": "#040483",
-      "text": "#1a1a2e"
+      "heading": "#111827",
+      "text": "#374151"
     },
     "dark": {
-      "brand": "#e0408a",
-      "heading": "#a0aaff",
-      "text": "#c4c9e0"
+      "brand": "#e879a3",
+      "heading": "#f9fafb",
+      "text": "#d1d5db"
     }
   },
   "scripts": [

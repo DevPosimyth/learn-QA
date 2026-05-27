@@ -1,154 +1,189 @@
 (function () {
+
+  /* ─── 1. INJECT CSS ─────────────────────────────────────────── */
   const css = `
-    /* ── WDesignKit Brand Overrides ── */
-
     :root {
-      --wdk-pink:   #C22076;
-      --wdk-navy:   #040483;
-      --wdk-pink-hover: #a81b64;
+      --wdk-pink:       #C22076;
+      --wdk-pink-light: rgba(194, 32, 118, 0.08);
+      --wdk-pink-mid:   rgba(194, 32, 118, 0.18);
+      --wdk-navy:       #040483;
     }
 
-    /* Primary brand color on links, active states, selections */
-    a,
-    [data-active="true"],
-    .active,
-    [aria-current="page"] {
-      color: var(--wdk-pink) !important;
+    /* Headings — dark, never pink */
+    h1, h2, h3, h4, h5, h6 {
+      color: #111827 !important;
+    }
+    .dark h1, .dark h2, .dark h3,
+    .dark h4, .dark h5, .dark h6,
+    [data-theme="dark"] h1,
+    [data-theme="dark"] h2,
+    [data-theme="dark"] h3 {
+      color: #f9fafb !important;
     }
 
-    a:hover {
-      color: var(--wdk-pink-hover) !important;
-    }
+    /* Links — brand pink, readable */
+    a { color: var(--wdk-pink) !important; }
+    a:hover { opacity: 0.8; }
 
-    /* Sidebar active item highlight */
+    /* Sidebar active item */
     nav a[aria-current="page"],
     nav [data-active="true"],
     aside a[aria-current="page"] {
-      background-color: rgba(194, 32, 118, 0.08) !important;
+      background: var(--wdk-pink-light) !important;
       color: var(--wdk-pink) !important;
       border-left: 3px solid var(--wdk-pink) !important;
-    }
-
-    /* Buttons */
-    button[data-primary],
-    .btn-primary,
-    [class*="primary-button"],
-    [class*="cta-button"] {
-      background-color: var(--wdk-pink) !important;
-      border-color: var(--wdk-pink) !important;
-    }
-
-    button[data-primary]:hover,
-    .btn-primary:hover {
-      background-color: var(--wdk-pink-hover) !important;
-    }
-
-    /* Headings */
-    h1, h2, h3, h4, h5, h6 {
-      color: #0f0f0f !important;
-    }
-
-    /* Dark mode overrides */
-    @media (prefers-color-scheme: dark) {
-      h1, h2, h3, h4, h5, h6 {
-        color: #f5f5f5 !important;
-      }
-    }
-
-    /* Sidebar — dark navy background to match learn.wdesignkit.com */
-    aside,
-    nav[class*="sidebar"],
-    [class*="sidebar-nav"],
-    [class*="left-sidebar"],
-    [data-sidebar] {
-      background-color: #060b2b !important;
-    }
-
-    /* Sidebar text */
-    aside a,
-    nav[class*="sidebar"] a,
-    [data-sidebar] a {
-      color: #c4c9e0 !important;
-    }
-
-    aside a:hover,
-    nav[class*="sidebar"] a:hover,
-    [data-sidebar] a:hover {
-      color: #ffffff !important;
-    }
-
-    /* Sidebar group headings */
-    aside [class*="group-title"],
-    aside [class*="section-title"],
-    aside [class*="nav-group"] > span,
-    aside [class*="nav-group"] > div > span {
-      color: #8892b0 !important;
-      font-size: 11px !important;
-      letter-spacing: 0.08em !important;
-      text-transform: uppercase !important;
+      border-radius: 6px !important;
       font-weight: 600 !important;
     }
 
-    /* Top navbar */
-    header,
-    [class*="navbar"],
-    [class*="topbar"],
-    [class*="header-"] {
-      border-bottom-color: rgba(194, 32, 118, 0.15) !important;
+    /* Sidebar — default light, clean */
+    aside a, nav a {
+      color: #374151 !important;
+    }
+    .dark aside a, .dark nav a {
+      color: #d1d5db !important;
     }
 
-    /* Content area headings */
-    article h1:first-child,
-    main h1:first-child {
-      color: #040483 !important;
-      font-weight: 700 !important;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      article h1:first-child,
-      main h1:first-child {
-        color: #a0aaff !important;
-      }
-    }
-
-    /* Inline code */
+    /* Inline code chips */
     code:not(pre code) {
-      background: rgba(194, 32, 118, 0.08) !important;
-      color: #C22076 !important;
-      border: 1px solid rgba(194, 32, 118, 0.2) !important;
+      background: var(--wdk-pink-light) !important;
+      color: var(--wdk-pink) !important;
       border-radius: 4px !important;
-      padding: 1px 5px !important;
+      padding: 1px 6px !important;
+      font-size: 0.875em !important;
     }
 
-    /* Search bar focus ring */
-    [class*="search"] input:focus,
-    [class*="search-input"]:focus {
-      border-color: var(--wdk-pink) !important;
-      box-shadow: 0 0 0 3px rgba(194, 32, 118, 0.15) !important;
+    /* ── Collapsible sidebar groups ── */
+    [data-sidebar-group-content],
+    .sidebar-group-content {
+      overflow: hidden;
+      transition: max-height 0.25s ease, opacity 0.2s ease;
     }
-
-    /* Scrollbar (webkit) */
-    ::-webkit-scrollbar-thumb {
-      background: rgba(194, 32, 118, 0.3) !important;
+    [data-sidebar-group-content].wdk-collapsed,
+    .sidebar-group-content.wdk-collapsed {
+      max-height: 0 !important;
+      opacity: 0;
     }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--wdk-pink) !important;
+    [data-sidebar-group-title],
+    .sidebar-group-title {
+      cursor: pointer;
+      user-select: none;
+    }
+    [data-sidebar-group-title]::after,
+    .sidebar-group-title::after {
+      content: '▾';
+      float: right;
+      font-size: 11px;
+      opacity: 0.5;
+      transition: transform 0.2s ease;
+    }
+    [data-sidebar-group-title].wdk-closed::after,
+    .sidebar-group-title.wdk-closed::after {
+      transform: rotate(-90deg);
     }
   `;
 
-  const style = document.createElement('style');
-  style.id = 'wdk-brand-overrides';
-  style.textContent = css;
-
-  function inject() {
-    if (!document.getElementById('wdk-brand-overrides')) {
-      (document.head || document.body || document.documentElement).appendChild(style.cloneNode(true));
-    }
+  function injectStyles() {
+    if (document.getElementById('wdk-brand')) return;
+    const s = document.createElement('style');
+    s.id = 'wdk-brand';
+    s.textContent = css;
+    (document.head || document.documentElement).appendChild(s);
   }
 
-  // Inject immediately and on every navigation (SPA-friendly)
-  inject();
-  const observer = new MutationObserver(inject);
+  /* ─── 2. COLLAPSIBLE SIDEBAR ────────────────────────────────── */
+  function initCollapsible() {
+    // Find all sidebar nav group containers
+    // documentation.ai uses varying class names — we find by structure
+    const sidebar = document.querySelector('aside, [class*="sidebar"], nav[class*="nav"]');
+    if (!sidebar) return;
+
+    // Find group title elements (elements containing group labels that are NOT links)
+    const allTexts = sidebar.querySelectorAll('p, span, div, li');
+    allTexts.forEach(el => {
+      // Skip if it's a link or inside a link
+      if (el.closest('a') || el.tagName === 'A') return;
+      // Skip if it has children that are links (it's a container)
+      if (!el.querySelector('a') && el.children.length === 0) return;
+
+      const style = window.getComputedStyle(el);
+      const text = el.textContent.trim();
+      // Group titles tend to be short, uppercase-ish or bold
+      if (
+        text.length > 0 &&
+        text.length < 40 &&
+        (style.fontWeight >= 600 || style.textTransform === 'uppercase') &&
+        !el.closest('a')
+      ) {
+        setupGroup(el);
+      }
+    });
+  }
+
+  function setupGroup(titleEl) {
+    if (titleEl.dataset.wdkInit) return;
+    titleEl.dataset.wdkInit = '1';
+
+    // Find the sibling or parent's sibling that contains the pages list
+    const parent = titleEl.parentElement;
+    if (!parent) return;
+
+    // Look for a UL or list of links as the "content" of the group
+    let content = null;
+    let next = parent.nextElementSibling;
+    if (next && next.querySelector('a')) {
+      content = next;
+    } else {
+      // Try children of parent
+      const lists = parent.querySelectorAll('ul, ol, [class*="pages"], [class*="items"]');
+      if (lists.length) content = lists[0];
+    }
+
+    if (!content) return;
+
+    // Check if active page is inside this group
+    const hasActivePage = content.querySelector('[aria-current="page"], [data-active="true"]');
+
+    // Collapse inactive groups by default
+    if (!hasActivePage) {
+      content.style.maxHeight = '0px';
+      content.style.overflow = 'hidden';
+      content.style.opacity = '0';
+      content.style.transition = 'max-height 0.25s ease, opacity 0.2s ease';
+      titleEl.dataset.wdkClosed = '1';
+    } else {
+      content.style.transition = 'max-height 0.25s ease, opacity 0.2s ease';
+    }
+
+    titleEl.style.cursor = 'pointer';
+    titleEl.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const isClosed = titleEl.dataset.wdkClosed === '1';
+      if (isClosed) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.opacity = '1';
+        delete titleEl.dataset.wdkClosed;
+      } else {
+        content.style.maxHeight = '0px';
+        content.style.opacity = '0';
+        titleEl.dataset.wdkClosed = '1';
+      }
+    });
+  }
+
+  /* ─── 3. RUN & OBSERVE ──────────────────────────────────────── */
+  function run() {
+    injectStyles();
+    setTimeout(initCollapsible, 600);
+  }
+
+  run();
+
+  // Re-run on SPA navigation
+  const observer = new MutationObserver(() => {
+    injectStyles();
+    setTimeout(initCollapsible, 600);
+  });
   observer.observe(document.documentElement, { childList: true, subtree: true });
+
 })();
