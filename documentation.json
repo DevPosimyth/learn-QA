@@ -1,5 +1,6 @@
 {
   "name": "WDesignKit Learning Center",
+  "initialRoute": "getting-started/index",
   "logo-light": "https://app.wdesignkit.com/images/logo-light.svg",
   "logo-dark": "https://app.wdesignkit.com/images/logo-dark.svg",
   "colors": {
