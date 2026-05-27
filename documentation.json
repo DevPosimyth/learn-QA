@@ -1,16 +1,23 @@
 {
   "name": "WDesignKit Learning Center",
   "initialRoute": "getting-started/index",
-  "logo-light": "https://app.wdesignkit.com/images/logo-light.svg",
-  "logo-dark": "https://app.wdesignkit.com/images/logo-dark.svg",
+  "logo-light": "https://learn.wdesignkit.com/wp-content/uploads/2024/03/Frame-1272631106.svg",
+  "logo-dark": "https://learn.wdesignkit.com/wp-content/uploads/2024/03/Frame-1272631106.svg",
   "colors": {
     "light": {
-      "brand": "#6B3FF6"
+      "brand": "#C22076",
+      "heading": "#040483",
+      "text": "#1a1a2e"
     },
     "dark": {
-      "brand": "#6B3FF6"
+      "brand": "#e0408a",
+      "heading": "#a0aaff",
+      "text": "#c4c9e0"
     }
   },
+  "scripts": [
+    { "src": "scripts/brand.js" }
+  ],
   "navigation": {
     "tabs": [
       {
