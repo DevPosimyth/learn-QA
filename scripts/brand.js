@@ -1,85 +1,51 @@
 (function () {
 
-  /* ─── 1. INJECT CSS ─────────────────────────────────────────── */
+  /* ─── 1. CSS ─────────────────────────────────────────────────── */
   const css = `
     :root {
-      --wdk-pink:       #C22076;
-      --wdk-pink-light: rgba(194, 32, 118, 0.08);
-      --wdk-pink-mid:   rgba(194, 32, 118, 0.18);
-      --wdk-navy:       #040483;
+      --wdk-pink:  #C22076;
+      --wdk-pink-bg: rgba(194,32,118,0.08);
     }
 
-    /* Headings — dark, never pink */
+    /* Headings — always dark, never brand-colored */
     h1, h2, h3, h4, h5, h6 {
       color: #111827 !important;
     }
     .dark h1, .dark h2, .dark h3,
-    .dark h4, .dark h5, .dark h6,
-    [data-theme="dark"] h1,
-    [data-theme="dark"] h2,
-    [data-theme="dark"] h3 {
+    .dark h4, .dark h5, .dark h6 {
       color: #f9fafb !important;
     }
 
-    /* Links — brand pink, readable */
-    a { color: var(--wdk-pink) !important; }
-    a:hover { opacity: 0.8; }
-
-    /* Sidebar active item */
-    nav a[aria-current="page"],
-    nav [data-active="true"],
-    aside a[aria-current="page"] {
-      background: var(--wdk-pink-light) !important;
-      color: var(--wdk-pink) !important;
-      border-left: 3px solid var(--wdk-pink) !important;
-      border-radius: 6px !important;
-      font-weight: 600 !important;
-    }
-
-    /* Sidebar — default light, clean */
-    aside a, nav a {
-      color: #374151 !important;
-    }
-    .dark aside a, .dark nav a {
-      color: #d1d5db !important;
-    }
-
-    /* Inline code chips */
+    /* Inline code */
     code:not(pre code) {
-      background: var(--wdk-pink-light) !important;
+      background: var(--wdk-pink-bg) !important;
       color: var(--wdk-pink) !important;
       border-radius: 4px !important;
       padding: 1px 6px !important;
-      font-size: 0.875em !important;
     }
 
-    /* ── Collapsible sidebar groups ── */
-    [data-sidebar-group-content],
-    .sidebar-group-content {
-      overflow: hidden;
-      transition: max-height 0.25s ease, opacity 0.2s ease;
+    /* Sidebar group title — add chevron indicator */
+    nav.space-y-8 > div > p[title] {
+      cursor: pointer !important;
+      user-select: none !important;
+      justify-content: space-between !important;
     }
-    [data-sidebar-group-content].wdk-collapsed,
-    .sidebar-group-content.wdk-collapsed {
-      max-height: 0 !important;
-      opacity: 0;
-    }
-    [data-sidebar-group-title],
-    .sidebar-group-title {
-      cursor: pointer;
-      user-select: none;
-    }
-    [data-sidebar-group-title]::after,
-    .sidebar-group-title::after {
+    nav.space-y-8 > div > p[title]::after {
       content: '▾';
-      float: right;
       font-size: 11px;
-      opacity: 0.5;
+      opacity: 0.45;
       transition: transform 0.2s ease;
+      flex-shrink: 0;
+      margin-left: auto;
+      padding-left: 4px;
     }
-    [data-sidebar-group-title].wdk-closed::after,
-    .sidebar-group-title.wdk-closed::after {
+    nav.space-y-8 > div > p[title].wdk-closed::after {
       transform: rotate(-90deg);
+    }
+
+    /* Collapsed state for group pages list */
+    nav.space-y-8 > div > ul.wdk-hidden {
+      display: none !important;
     }
   `;
 
@@ -93,97 +59,64 @@
 
   /* ─── 2. COLLAPSIBLE SIDEBAR ────────────────────────────────── */
   function initCollapsible() {
-    // Find all sidebar nav group containers
-    // documentation.ai uses varying class names — we find by structure
-    const sidebar = document.querySelector('aside, [class*="sidebar"], nav[class*="nav"]');
-    if (!sidebar) return;
+    // The sidebar nav is: <nav class="space-y-8 py-1">
+    const nav = document.querySelector('nav.space-y-8');
+    if (!nav) return;
 
-    // Find group title elements (elements containing group labels that are NOT links)
-    const allTexts = sidebar.querySelectorAll('p, span, div, li');
-    allTexts.forEach(el => {
-      // Skip if it's a link or inside a link
-      if (el.closest('a') || el.tagName === 'A') return;
-      // Skip if it has children that are links (it's a container)
-      if (!el.querySelector('a') && el.children.length === 0) return;
+    // Each group is a <div class="space-y-0"> direct child of nav
+    const groups = nav.querySelectorAll(':scope > div');
+    groups.forEach(group => {
+      // Group title: <p title="Group Name" ...>
+      const titleEl = group.querySelector(':scope > p[title]');
+      // Pages list: <ul class="space-y-0">
+      const pagesList = group.querySelector(':scope > ul');
 
-      const style = window.getComputedStyle(el);
-      const text = el.textContent.trim();
-      // Group titles tend to be short, uppercase-ish or bold
-      if (
-        text.length > 0 &&
-        text.length < 40 &&
-        (style.fontWeight >= 600 || style.textTransform === 'uppercase') &&
-        !el.closest('a')
-      ) {
-        setupGroup(el);
+      if (!titleEl || !pagesList) return;
+      if (titleEl.dataset.wdkInit) return;
+      titleEl.dataset.wdkInit = '1';
+
+      // Check if this group has the currently active page
+      // Active page link has class "bg-brand/10" or "border-brand"
+      const hasActive = pagesList.querySelector('a.bg-brand\\/10, a[class*="bg-brand"]');
+
+      // Collapse all groups except the active one
+      if (!hasActive) {
+        pagesList.classList.add('wdk-hidden');
+        titleEl.classList.add('wdk-closed');
       }
+
+      // Toggle on click
+      titleEl.addEventListener('click', function () {
+        const isHidden = pagesList.classList.contains('wdk-hidden');
+        if (isHidden) {
+          pagesList.classList.remove('wdk-hidden');
+          titleEl.classList.remove('wdk-closed');
+        } else {
+          pagesList.classList.add('wdk-hidden');
+          titleEl.classList.add('wdk-closed');
+        }
+      });
     });
   }
 
-  function setupGroup(titleEl) {
-    if (titleEl.dataset.wdkInit) return;
-    titleEl.dataset.wdkInit = '1';
-
-    // Find the sibling or parent's sibling that contains the pages list
-    const parent = titleEl.parentElement;
-    if (!parent) return;
-
-    // Look for a UL or list of links as the "content" of the group
-    let content = null;
-    let next = parent.nextElementSibling;
-    if (next && next.querySelector('a')) {
-      content = next;
-    } else {
-      // Try children of parent
-      const lists = parent.querySelectorAll('ul, ol, [class*="pages"], [class*="items"]');
-      if (lists.length) content = lists[0];
-    }
-
-    if (!content) return;
-
-    // Check if active page is inside this group
-    const hasActivePage = content.querySelector('[aria-current="page"], [data-active="true"]');
-
-    // Collapse inactive groups by default
-    if (!hasActivePage) {
-      content.style.maxHeight = '0px';
-      content.style.overflow = 'hidden';
-      content.style.opacity = '0';
-      content.style.transition = 'max-height 0.25s ease, opacity 0.2s ease';
-      titleEl.dataset.wdkClosed = '1';
-    } else {
-      content.style.transition = 'max-height 0.25s ease, opacity 0.2s ease';
-    }
-
-    titleEl.style.cursor = 'pointer';
-    titleEl.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const isClosed = titleEl.dataset.wdkClosed === '1';
-      if (isClosed) {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.opacity = '1';
-        delete titleEl.dataset.wdkClosed;
-      } else {
-        content.style.maxHeight = '0px';
-        content.style.opacity = '0';
-        titleEl.dataset.wdkClosed = '1';
-      }
-    });
-  }
-
-  /* ─── 3. RUN & OBSERVE ──────────────────────────────────────── */
+  /* ─── 3. BOOT ───────────────────────────────────────────────── */
   function run() {
     injectStyles();
-    setTimeout(initCollapsible, 600);
+    // Wait for React to hydrate the sidebar
+    setTimeout(initCollapsible, 800);
+    setTimeout(initCollapsible, 1800); // retry for slow loads
   }
 
   run();
 
-  // Re-run on SPA navigation
-  const observer = new MutationObserver(() => {
+  // Re-run on SPA route changes
+  let lastPath = location.pathname;
+  new MutationObserver(() => {
     injectStyles();
-    setTimeout(initCollapsible, 600);
-  });
-  observer.observe(document.documentElement, { childList: true, subtree: true });
+    if (location.pathname !== lastPath) {
+      lastPath = location.pathname;
+      setTimeout(initCollapsible, 800);
+    }
+  }).observe(document.documentElement, { childList: true, subtree: true });
 
 })();
