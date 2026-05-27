@@ -1,7 +1,7 @@
 {
   "name": "WDesignKit Learning Center",
   "initialRoute": "getting-started/index",
-  "logo-light": "https://wdesignkit.instawp.link/wp-content/plugins/wdesignkit/assets/images/svg/logo/wdkit-light-logo.svg",
+  "logo-light": "https://raw.githubusercontent.com/DevPosimyth/learn-QA/main/public/wdkit-light-logo.svg",
   "logo-dark": "https://learn.wdesignkit.com/wp-content/uploads/2024/03/Frame-1272631106.svg",
   "colors": {
     "light": {
