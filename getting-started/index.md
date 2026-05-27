@@ -1,3 +1,8 @@
+---
+title: "Getting Started"
+description: "Quick guides to help you install, set up, and start using WDesignKit smoothly."
+---
+
 # Getting Started
 
 Quick guides to help you install, set up, and start using WDesignKit smoothly.

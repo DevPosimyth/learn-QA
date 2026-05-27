@@ -1,3 +1,8 @@
+---
+title: "Ready Widgets"
+description: "Explore ready-made widgets built by the WDesignKit team."
+---
+
 # Ready Widgets
 
 Explore ready-made widgets built by the WDesignKit team and learn how to use them in Elementor, Gutenberg, and Bricks.

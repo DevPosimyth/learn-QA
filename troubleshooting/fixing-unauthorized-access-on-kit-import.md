@@ -1,3 +1,8 @@
+---
+title: "Fixing "Unauthorized Access" Issue on Kit Import"
+description: "How to fix unauthorized access errors when importing kits in WDesignKit."
+---
+
 # Fixing "Unauthorized Access" Issue on Kit Import
 
 ## Overview

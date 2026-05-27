@@ -1,3 +1,8 @@
+---
+title: "How Does the Copy Paste Feature Work in Bricks"
+description: "How the copy-paste feature works across domains in Bricks Builder."
+---
+
 # How Does the Copy Paste Feature Work in Bricks?
 
 ## Overview

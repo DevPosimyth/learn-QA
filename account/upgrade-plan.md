@@ -1,3 +1,8 @@
+---
+title: "How to Upgrade the Current Plan to Higher in WDesignKit"
+description: "Step-by-step guide to upgrading your current WDesignKit plan."
+---
+
 # How to Upgrade the Current Plan to Higher in WDesignKit?
 
 ## Overview

@@ -1,3 +1,8 @@
+---
+title: "Account"
+description: "Manage your WDesignKit account, license, billing, upgrades, and subscription settings."
+---
+
 # Account
 
 Manage your WDesignKit account, license, billing, upgrades, and subscription settings.

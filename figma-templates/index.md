@@ -1,3 +1,8 @@
+---
+title: "Figma Templates & UiChemy"
+description: "Use WDesignKit Figma templates and convert them to WordPress pages with UiChemy."
+---
+
 # Figma Templates & UiChemy
 
 Learn how to use WDesignKit's Figma templates and convert them directly into live WordPress pages using UiChemy.

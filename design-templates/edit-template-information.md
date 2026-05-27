@@ -1,3 +1,8 @@
+---
+title: "How to Edit Information of a Template or Website Kit"
+description: "How to edit the information and visibility of a template or website kit."
+---
+
 # How to Edit Information of a Template or Website Kit
 
 ## Overview

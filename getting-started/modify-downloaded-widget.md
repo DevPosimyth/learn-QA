@@ -1,3 +1,8 @@
+---
+title: "How to Modify Widgets Downloaded From WDesignKit's Public Library"
+description: "How to modify widgets downloaded from the WDesignKit public library."
+---
+
 # How to Modify Widgets Downloaded From WDesignKit's Public Library
 
 ## Overview

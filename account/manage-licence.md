@@ -1,3 +1,8 @@
+---
+title: "How to Manage Licence in WDesignKit"
+description: "Learn how to manage your licence credits and activate products in WDesignKit."
+---
+
 # How to Manage Licence in WDesignKit?
 
 ## WDesignKit Credit System

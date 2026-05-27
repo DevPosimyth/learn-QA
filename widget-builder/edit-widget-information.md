@@ -1,3 +1,8 @@
+---
+title: "How to Edit Information of an Elementor Widget or Gutenberg Block"
+description: "How to edit the name and details of a widget in WDesignKit."
+---
+
 # How to Edit Information of an Elementor Widget or Gutenberg Block?
 
 ## Overview

@@ -1,3 +1,8 @@
+---
+title: "How to See Previously Downloaded Templates in WDesignKit"
+description: "How to view your previously downloaded templates in WDesignKit."
+---
+
 # How to See Previously Downloaded Templates in WDesignKit
 
 ## Overview

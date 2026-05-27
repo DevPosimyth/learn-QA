@@ -1,3 +1,8 @@
+---
+title: "How to Update Your Payment Method"
+description: "How to update your payment method for your WDesignKit subscription."
+---
+
 # How to Update Your Payment Method
 
 ## Overview

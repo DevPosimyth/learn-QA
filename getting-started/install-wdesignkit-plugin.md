@@ -1,3 +1,8 @@
+---
+title: "How to Install WDesignKit WordPress Plugin"
+description: "Step-by-step guide to installing the WDesignKit WordPress plugin."
+---
+
 # How to Install WDesignKit WordPress Plugin?
 
 ## Install and Activate WDesignKit Plugin

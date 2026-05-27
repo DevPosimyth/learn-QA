@@ -1,3 +1,8 @@
+---
+title: "How to Get UiChemy Compatible Pro Figma Templates"
+description: "Discover UiChemy-compatible pro templates available in WDesignKit."
+---
+
 # How to Get UiChemy Compatible Pro Figma Templates?
 
 ## Overview

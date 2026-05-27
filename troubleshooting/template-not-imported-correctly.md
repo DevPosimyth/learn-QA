@@ -1,3 +1,8 @@
+---
+title: "Template Not Imported Correctly or Some Elements Are Missing (Fixed)"
+description: "How to fix templates that did not import correctly in WDesignKit."
+---
+
 # Template Not Imported Correctly or Some Elements Are Missing (Fixed)
 
 ## Overview

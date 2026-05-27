@@ -1,3 +1,8 @@
+---
+title: "How to Import and Export Elementor Widget or Gutenberg Block"
+description: "How to import and export widgets in WDesignKit."
+---
+
 # How to Import and Export Elementor Widget or Gutenberg Block?
 
 ## Overview

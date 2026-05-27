@@ -1,3 +1,8 @@
+---
+title: "How to Download Figma Templates"
+description: "How to download and use Figma templates in WDesignKit."
+---
+
 # How to Download Figma Templates
 
 ## Overview

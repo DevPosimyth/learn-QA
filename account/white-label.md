@@ -1,3 +1,8 @@
+---
+title: "How to White Label WDesignKit with Your Brand Name"
+description: "How to white label WDesignKit with your own brand name and logo."
+---
+
 # How to White Label WDesignKit with Your Brand Name
 
 ## Overview

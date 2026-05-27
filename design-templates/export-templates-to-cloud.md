@@ -1,3 +1,8 @@
+---
+title: "How to Export Templates From Your Elementor Site to Cloud"
+description: "How to export templates from your Elementor site to the WDesignKit cloud."
+---
+
 # How to Export Templates From Your Elementor Site to Cloud?
 
 ## Overview

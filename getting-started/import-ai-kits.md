@@ -1,3 +1,8 @@
+---
+title: "How to Import AI Kits in WDesignKit"
+description: "How to import AI-powered kits in WDesignKit."
+---
+
 # How to Import AI Kits in WDesignKit
 
 ## Overview

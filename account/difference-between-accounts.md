@@ -1,3 +1,8 @@
+---
+title: "Difference Between WDesignKit Account and POSIMYTH Store Account"
+description: "Understand the difference between your WDesignKit account and POSIMYTH Store account."
+---
+
 # Difference Between WDesignKit Account and POSIMYTH Store Account
 
 ## Overview

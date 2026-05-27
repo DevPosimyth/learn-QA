@@ -1,3 +1,8 @@
+---
+title: "How to Get License Key for WDesignKit Activation"
+description: "How to get your license key and activate WDesignKit and its products."
+---
+
 # How to Get License Key for WDesignKit Activation
 
 ## Overview

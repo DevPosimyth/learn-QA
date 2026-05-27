@@ -1,3 +1,8 @@
+---
+title: "How to Access and Use the Workspace in WDesignKit"
+description: "How to access and use the WDesignKit workspace for team collaboration."
+---
+
 # How to Access and Use the Workspace in WDesignKit
 
 ## 1. Create a Workspace

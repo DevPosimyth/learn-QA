@@ -1,3 +1,8 @@
+---
+title: "WDesignKit Documentation"
+description: "Complete guide to WDesignKit templates, widgets, widget builder, snippets, and workspaces."
+---
+
 # WDesignKit Documentation
 
 Welcome to the WDesignKit Learning Center — your complete guide to templates, widgets, the widget builder, snippets, workspaces, and everything in between.

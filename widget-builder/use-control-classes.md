@@ -1,3 +1,8 @@
+---
+title: "How to Use Control Classes to Style UI Elements"
+description: "How to use control classes in the WDesignKit widget builder."
+---
+
 # How to Use Control Classes to Style UI Elements
 
 ## Overview

@@ -1,3 +1,8 @@
+---
+title: "How to Create Custom Elementor Widget Using Free WDesignKit Widget Builder"
+description: "Step-by-step guide to creating a custom Elementor widget in WDesignKit."
+---
+
 # How to Create Custom Elementor Widget Using Free WDesignKit Widget Builder
 
 ## Overview

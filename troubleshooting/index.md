@@ -1,3 +1,8 @@
+---
+title: "Troubleshooting"
+description: "Find solutions to common WDesignKit issues and keep your workflow running smoothly."
+---
+
 # Troubleshooting
 
 Find quick solutions to common issues and keep your WDesignKit workflow running smoothly.

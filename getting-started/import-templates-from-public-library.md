@@ -1,3 +1,8 @@
+---
+title: "How to Import Templates From WDesignKit Public Library to Your Elementor or Gutenberg Site"
+description: "How to browse and import templates from the WDesignKit public library."
+---
+
 # How to Import Templates From WDesignKit Public Library to Your Elementor or Gutenberg Site
 
 ## Overview

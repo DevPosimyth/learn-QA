@@ -1,3 +1,8 @@
+---
+title: "How to Use Credits in WDesignKit"
+description: "Understand storage credits and AI credits in WDesignKit and how to use them."
+---
+
 # How to Use Credits in WDesignKit
 
 ## Overview

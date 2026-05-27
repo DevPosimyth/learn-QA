@@ -1,3 +1,8 @@
+---
+title: "How to Add Templates, Widgets, and Snippets in a Workspace"
+description: "How to add templates, widgets, and snippets to a WDesignKit workspace."
+---
+
 # How to Add Templates, Widgets, and Snippets in a Workspace
 
 ## Overview

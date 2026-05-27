@@ -1,3 +1,8 @@
+---
+title: "How to Reset Password of WDesignKit Account"
+description: "How to reset your WDesignKit account password."
+---
+
 # How to Reset Password of WDesignKit Account?
 
 ## Overview

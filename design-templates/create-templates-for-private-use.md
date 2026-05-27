@@ -1,3 +1,8 @@
+---
+title: "How to Create Templates for Private Use"
+description: "How to create and save templates for private use in WDesignKit."
+---
+
 # How to Create Templates for Private Use?
 
 ## Overview

@@ -1,3 +1,8 @@
+---
+title: "How to Manage Versions of a Widget"
+description: "How to manage and rollback versions of a widget in WDesignKit."
+---
+
 # How to Manage Versions of a Widget?
 
 ## Overview

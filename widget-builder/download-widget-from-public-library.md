@@ -1,3 +1,8 @@
+---
+title: "How to Download Widget From Public Library of WDesignKit"
+description: "How to download a widget from the WDesignKit public library."
+---
+
 # How to Download Widget From Public Library of WDesignKit?
 
 ## Overview

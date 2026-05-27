@@ -1,3 +1,8 @@
+---
+title: "How to Manage Workspace Roles and Permissions in WDesignKit"
+description: "Manage roles and permissions for members in your WDesignKit workspace."
+---
+
 # How to Manage Workspace Roles and Permissions in WDesignKit
 
 ## Overview

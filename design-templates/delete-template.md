@@ -1,3 +1,8 @@
+---
+title: "How to Delete a Template or Website Kit in WDesignKit"
+description: "How to delete a template or website kit in WDesignKit."
+---
+
 # How to Delete a Template or Website Kit in WDesignKit
 
 ## Overview

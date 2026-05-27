@@ -1,3 +1,8 @@
+---
+title: "How to Enable or Disable Template and Widget Features in WDesignKit"
+description: "How to enable or disable template and widget features in WDesignKit."
+---
+
 # How to Enable or Disable Template and Widget Features in WDesignKit
 
 ## Overview

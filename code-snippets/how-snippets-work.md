@@ -1,3 +1,8 @@
+---
+title: "How Do Snippets Work in WDesignKit"
+description: "How code snippets work in WDesignKit and how to use them."
+---
+
 # How Do Snippets Work in WDesignKit?
 
 ## Overview

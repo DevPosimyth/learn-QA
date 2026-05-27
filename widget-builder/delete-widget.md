@@ -1,3 +1,8 @@
+---
+title: "How to Delete Elementor Widget or Gutenberg Block"
+description: "How to delete a widget from WDesignKit."
+---
+
 # How to Delete Elementor Widget or Gutenberg Block?
 
 ## Overview

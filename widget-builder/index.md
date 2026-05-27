@@ -1,3 +1,8 @@
+---
+title: "Widget Builder"
+description: "Create custom widgets for Elementor, Gutenberg, and Bricks with WDesignKit."
+---
+
 # Widget Builder
 
 Create custom widgets for Elementor, Gutenberg, and Bricks using WDesignKit's powerful no-code widget builder with advanced controls.

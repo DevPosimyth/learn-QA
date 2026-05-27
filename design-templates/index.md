@@ -1,3 +1,8 @@
+---
+title: "Design Templates"
+description: "Browse, import, customize, and manage design templates in WDesignKit."
+---
+
 # Design Templates
 
 Learn how to browse, import, customize, and manage design templates in WDesignKit.

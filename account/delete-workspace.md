@@ -1,3 +1,8 @@
+---
+title: "How to Delete a Workspace in WDesignKit"
+description: "How to delete a workspace in WDesignKit."
+---
+
 # How to Delete a Workspace in WDesignKit
 
 ## Overview

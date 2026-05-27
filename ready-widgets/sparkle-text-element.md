@@ -1,3 +1,8 @@
+---
+title: "Sparkle Text Element"
+description: "How to use the Sparkle Text ready widget in WDesignKit."
+---
+
 # Sparkle Text Element
 
 ## Overview

@@ -1,3 +1,8 @@
+---
+title: "How to Create a Pagekit From Sections and Full Pages"
+description: "How to create a pagekit from sections and full pages in WDesignKit."
+---
+
 # How to Create a Pagekit From Sections and Full Pages
 
 ## Overview

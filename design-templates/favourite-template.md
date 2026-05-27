@@ -1,3 +1,8 @@
+---
+title: "How to Favourite a Template or Website Kit in WDesignKit"
+description: "How to mark a template or website kit as a favourite in WDesignKit."
+---
+
 # How to Favourite a Template or Website Kit in WDesignKit
 
 ## Overview
